@@ -4,7 +4,7 @@ import Hello from "./Hello";
 function App() {
   return (
     <div className="App">
-      <Hello />
+      <Hello greeting={"Hello" + " React Ninja"} />
     </div>
   );
 }

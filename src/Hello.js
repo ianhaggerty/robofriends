@@ -1,11 +1,11 @@
 import React from "react";
 import "./Hello.css";
 
-function Hello() {
+function Hello({ greeting }) {
   return (
     <div className="f1 tc">
       <h1>Hello, World</h1>
-      <p>Welcome to React</p>
+      <p>{greeting}</p>
     </div>
   );
 }
