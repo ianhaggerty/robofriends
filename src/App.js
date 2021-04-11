@@ -23,8 +23,8 @@ class App extends React.Component {
     });
 
     return (
-      <div className="tc">
-        <h1>Robofriends</h1>
+      <div className="tc courier">
+        <h1 className="f1">Robofriends</h1>
         <SearchBox onSearchChange={this.onSearchChange} />
         <CardList robots={filteredRobots} />
       </div>
