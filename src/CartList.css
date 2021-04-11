@@ -1,0 +1,30 @@
+.cardlist {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 1500px) {
+  .cardlist {
+    grid-template-columns: 30% 30% 30%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .cardlist {
+    grid-template-columns: 30% 30% 30%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .cardlist {
+    grid-template-columns: 40% 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cardlist {
+    grid-template-columns: 80%;
+  }
+}
