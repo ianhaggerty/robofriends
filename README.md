@@ -19,6 +19,6 @@ You can find a production build of the App [here](https://ianhaggerty.github.io/
 
 ## Credits
 
-[Ian Haggerty](https://github.com/ianhaggerty) Wrote the code! Built the repo, amongst other things.
+[Ian Haggerty](https://github.com/ianhaggerty) Wrote the code! Built the repo, added some new features.
 
-[Andrei Neagoie](https://github.com/aneagoie) Course instructor.
+[Andrei Neagoie](https://github.com/aneagoie) Our visionary course instructor!

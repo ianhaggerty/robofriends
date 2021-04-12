@@ -8,6 +8,7 @@ const CardList = ({ robots, loading }) => {
   if (loading) {
     return (
       <div className="cardlist">
+        {/* TODO Hardcoded # of loading elements here*/}
         {integerArray(8).map((i) => (
           <Card key={i}>
             <BeatLoader loading={true} color="white" />
