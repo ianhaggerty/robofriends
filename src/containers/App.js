@@ -3,6 +3,7 @@ import CardList from "../components/CardList";
 import ErrorBoundary from "../components/ErrorBoundary";
 import Scroll from "../components/Scroll";
 import SearchBox from "../components/SearchBox";
+import { delay } from "../utility";
 import "./App.css";
 
 class App extends React.Component {
@@ -18,7 +19,7 @@ class App extends React.Component {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((users) => {
-        this.setState({ robots: users });
+        delay(2000).then(() => this.setState({ robots: users }));
       });
   };
 
@@ -38,7 +39,7 @@ class App extends React.Component {
         <SearchBox onSearchChange={this.onSearchChange} />
         <Scroll>
           <ErrorBoundary>
-            <CardList robots={filteredRobots} />
+            <CardList robots={filteredRobots} loading={!robots.length} />
           </ErrorBoundary>
         </Scroll>
       </div>

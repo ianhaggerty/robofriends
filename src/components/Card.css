@@ -1,0 +1,7 @@
+.card {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
