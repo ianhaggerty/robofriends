@@ -29,7 +29,7 @@ function App({ onSearchChange, searchField }) {
   return (
     <div className="app tc courier">
       <h1 className="f1">Robofriends</h1>
-      <SearchBox onSearchChange={onSearchChange} />
+      <SearchBox onSearchChange={onSearchChange} value={searchField} />
       <Scroll>
         <ErrorBoundary>
           <CardList robots={filteredRobots} loading={!robots.length} />
