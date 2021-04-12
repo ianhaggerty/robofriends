@@ -14,7 +14,7 @@ export const setSearchField = (text) => ({
 export const requestRobots = () => (dispatch) => {
   dispatch({ type: REQUEST_ROBOTS_PENDING });
 
-  fetch("https://jsonplaceholr.typicode.com/users")
+  fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .then((users) => delay(2000, users))
     .then((users) => dispatch({ type: REQUEST_ROBOTS_SUCCESS, payload: users }))
