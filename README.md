@@ -13,6 +13,10 @@ Bootstrapped with [Create React App](https://reactjs.org/docs/create-a-new-react
 
 You can find a production build of the App [here](https://ianhaggerty.github.io/robofriends/).
 
+## Other Dependencies
+
+[React Spinners](https://github.com/davidhu2000/react-spinners)
+
 ## Credits
 
 [Ian Haggerty](https://github.com/ianhaggerty) Wrote the code! Built the repo, amongst other things.
