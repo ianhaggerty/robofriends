@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import CardList from "../components/CardList";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -6,21 +6,20 @@ import Scroll from "../components/Scroll";
 import SearchBox from "../components/SearchBox";
 
 import { connect } from "react-redux";
-import { setSearchField } from "../actions";
-
-import { delay } from "../utility";
+import { requestRobots, setSearchField } from "../actions";
 
 import "./App.css";
 
-function App({ onSearchChange, searchField }) {
-  const [robots, setRobots] = useState([]);
-
+function App({
+  onSearchChange,
+  searchField,
+  requestRobots,
+  robots,
+  robotRequestError,
+}) {
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((users) => delay(2000, users))
-      .then(setRobots);
-  }, []);
+    requestRobots();
+  }, [requestRobots]);
 
   const filteredRobots = robots.filter((robots) => {
     return robots.name.toLowerCase().includes(searchField.toLowerCase());
@@ -31,7 +30,7 @@ function App({ onSearchChange, searchField }) {
       <h1 className="f1">Robofriends</h1>
       <SearchBox onSearchChange={onSearchChange} value={searchField} />
       <Scroll>
-        <ErrorBoundary>
+        <ErrorBoundary hasError={robotRequestError}>
           <CardList robots={filteredRobots} loading={!robots.length} />
         </ErrorBoundary>
       </Scroll>
@@ -40,11 +39,14 @@ function App({ onSearchChange, searchField }) {
 }
 
 const mapStateToProps = (state) => ({
-  searchField: state.searchField,
+  searchField: state.searchRobots.searchField,
+  robots: state.requestRobots.robots,
+  robotRequestError: state.requestRobots.error,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSearchChange: ({ target: { value } }) => dispatch(setSearchField(value)),
+  requestRobots: () => dispatch(requestRobots()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
