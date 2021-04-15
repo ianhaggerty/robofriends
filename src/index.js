@@ -2,32 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { Provider } from "react-redux";
-import { applyMiddleware, createStore, compose, combineReducers } from "redux";
-import logger from "redux-logger";
-import thunkMiddleware from "redux-thunk";
+
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 import "tachyons";
 
 import App from "./containers/App";
-import { searchRobots, requestRobots } from "./store/reducers";
-
-const rootReducer = combineReducers({ searchRobots, requestRobots });
-const middleWare = [thunkMiddleware];
-
-/// Development Middleware
-let composeEnhancers = compose;
-if (process.env.NODE_ENV !== "production") {
-  /// Logging
-  middleWare.push(logger);
-  /// Redux Devtools
-  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-}
-
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(...middleWare))
-);
+import store from "./store/setupStore";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -35,3 +18,13 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register({ scope: "/" });
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals(console.log);

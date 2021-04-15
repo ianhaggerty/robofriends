@@ -17,11 +17,19 @@ You can find a production build of the App [here](https://ianhaggerty.github.io/
 
 [React Spinners](https://github.com/davidhu2000/react-spinners)
 
-## Links
+## Other Links
 
 - [Favicon Generator](https://realfavicongenerator.net/)
 
   This will generate the necessary files deploy in app stores.
+
+- [Service worker without HTTPS](https://stackoverflow.com/questions/38728176/can-you-use-a-service-worker-with-a-self-signed-certificate)
+
+  `chrome://flags`
+
+  `Allow invalid certificates for resources loaded from localhost`
+
+  `Insecure origins treated as secure`
 
 ## Credits
 
