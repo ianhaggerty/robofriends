@@ -19,7 +19,9 @@ You can find a production build of the App [here](https://ianhaggerty.github.io/
 
 ## Links
 
-[Favicon Generator](https://realfavicongenerator.net/)
+- [Favicon Generator](https://realfavicongenerator.net/)
+
+  This will generate the necessary files deploy in app stores.
 
 ## Credits
 

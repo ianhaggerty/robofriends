@@ -10,7 +10,6 @@ import "./index.css";
 import "tachyons";
 
 import App from "./containers/App";
-import registerServiceWorker from "./registerServiceWorker";
 import { searchRobots, requestRobots } from "./store/reducers";
 
 const rootReducer = combineReducers({ searchRobots, requestRobots });
@@ -36,5 +35,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-
-registerServiceWorker();
