@@ -6,7 +6,7 @@ import Scroll from "../components/Scroll";
 import SearchBox from "../components/SearchBox";
 
 import { connect } from "react-redux";
-import { requestRobots, setSearchField } from "../actions";
+import { requestRobots, setSearchField } from "../store/actions";
 
 import "./App.css";
 

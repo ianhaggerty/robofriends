@@ -10,7 +10,7 @@ import "./index.css";
 import "tachyons";
 
 import App from "./containers/App";
-import { searchRobots, requestRobots } from "./reducers";
+import { searchRobots, requestRobots } from "./store/reducers";
 
 const rootReducer = combineReducers({ searchRobots, requestRobots });
 const middleWare = [thunkMiddleware];

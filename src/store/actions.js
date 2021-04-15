@@ -4,7 +4,7 @@ import {
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED,
 } from "./constants";
-import { delay } from "./utility";
+import { delay } from "../utility";
 
 export const setSearchField = (text) => ({
   type: CHANGE_SEARCH_FIELD,
