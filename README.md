@@ -17,6 +17,10 @@ You can find a production build of the App [here](https://ianhaggerty.github.io/
 
 [React Spinners](https://github.com/davidhu2000/react-spinners)
 
+## Links
+
+[Favicon Generator](https://realfavicongenerator.net/)
+
 ## Credits
 
 [Ian Haggerty](https://github.com/ianhaggerty) Wrote the code! Built the repo, added some new features.
