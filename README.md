@@ -31,6 +31,8 @@ You can find a production build of the App [here](https://ianhaggerty.github.io/
 
   `Insecure origins treated as secure`
 
+- [CRA PWA Template](https://github.com/cra-template/pwa)
+
 ## Credits
 
 [Ian Haggerty](https://github.com/ianhaggerty) Wrote the code! Built the repo, added some new features.
